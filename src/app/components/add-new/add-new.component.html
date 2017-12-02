@@ -1,0 +1,51 @@
+<div class="row">
+  <div class="col s8 offset-s2">
+    <form #f='ngForm' (ngSubmit)='onSubmit(f)' class="col s12 z-depth-1">
+      <div class="row" style="padding:20px;">
+        <div class="input-field col s6">
+          <input
+            id="name"
+            type="text"
+            class="validate"
+            name="name"
+            [(ngModel)]="feedback.name"
+            #feedbackName="ngModel"
+            minlength="2"
+            required
+          >
+          <label for="name">Name</label>
+        </div>
+        <div class="col s6">
+
+          <p>
+            <input value="Testimonial" type="radio" id="testimonial" class="with-gap" name="category" [(ngModel)]="feedback.category">
+            <label for="testimonial">Testimonial</label>
+          </p>
+          <p>
+            <input value="Suggestion for Improvement" name="category" type="radio" id="improvement" class="with-gap" [(ngModel)]="feedback.category">
+            <label for="improvement">Suggestion for Improvement</label>
+          </p>
+          <p>
+            <input value="Non-buyers" name="category" type="radio" id="nonbuyers" class="with-gap" [(ngModel)]="feedback.category">
+            <label for="nonbuyers">Non-buyers</label>
+          </p>
+
+        </div>
+      </div>
+      <div class="row" style="padding:20px;">
+        <div class="input-field col s12">
+          <textarea
+            id="body"
+            class="materialize-textarea"
+            name="body"
+            [(ngModel)]="feedback.body"
+            minlength="2"
+            required
+          ></textarea>
+          <label for="body">Message</label>
+        </div>
+      </div>
+      <input type="submit" value="Submit" class="btn" style='margin:20px;'>
+    </form>
+  </div>
+</div>

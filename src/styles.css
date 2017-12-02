@@ -1,1 +1,8 @@
 /* You can add global styles to this file, and also import other style files */
+.alerty{
+    padding: 5px;
+    border-radius: 10px;
+}
+.alerty p{
+    margin-left: 10px;
+}
