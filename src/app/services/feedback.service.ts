@@ -28,4 +28,8 @@ export class FeedbackService {
     return this.feedbackRef.remove(key);
   }
 
+  passVal(disp:boolean){
+    return disp;
+  }
+
 }

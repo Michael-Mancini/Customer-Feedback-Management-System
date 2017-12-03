@@ -1,3 +1,13 @@
-<p>
-  settings works!
-</p>
+<div class="row">
+  <div class="col s8 offset-s2 z-depth-1 grey lighten-4">
+    <h4 class="center-align">Settings</h4>
+    <form (submit)='onSubmit()'>
+      <p>
+        <input type="checkbox" id="reg" name="allowReg" [checked]="allowReg" (change)="allowReg = !allowReg" >
+        <label for="reg">Allow Registration</label>
+      </p>
+      <button class="btn" type="submit" id="buttStyle">Update</button>
+    </form>
+    <br>
+  </div>
+</div>

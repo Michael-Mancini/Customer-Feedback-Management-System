@@ -6,3 +6,14 @@
 .alerty p{
     margin-left: 10px;
 }
+
+#buttStyle{
+    display: block;
+    width: 40%;
+    min-width: 110px;
+    margin: 0 auto;
+}
+
+#smallerText{
+    font-size: 18px;
+}

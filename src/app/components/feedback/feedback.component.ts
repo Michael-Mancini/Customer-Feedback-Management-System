@@ -3,6 +3,8 @@ import { FeedbackService } from '../../services/feedback.service';
 import { Feedback } from '../../models/Feedback';
 import { FlashMessagesService } from 'angular2-flash-messages';
 
+//import { Http } from '@angular/http';
+
 @Component({
   selector: 'app-feedback',
   templateUrl: './feedback.component.html',
@@ -22,6 +24,7 @@ export class FeedbackComponent implements OnInit {
       //console.log(feed);
       this.feedbacks = feed;
     });
+    this.addState = false;
   }
 
   addItem(){
@@ -33,10 +36,11 @@ export class FeedbackComponent implements OnInit {
     this.inQuestion = f;
   }
 
-  deleteF(event, key:string){
+  deleteF(){
     //delete
-    this.fbs.deleteFeedback(key);
-    console.log(key+' was deleted');
+    this.fbs.deleteFeedback(this.inQuestion.key);
+    this.deleteState = false;
+    console.log(this.inQuestion.name+' was deleted');
   }
 
   changeback(){

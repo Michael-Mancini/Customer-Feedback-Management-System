@@ -1,3 +1,24 @@
-<p>
-  login works!
-</p>
+<div class="row">
+  <div class="col s8 offset-s2">
+    <form (submit)='onSubmit()' class="col s12 z-depth-1 grey lighten-4">
+      <div class="row">
+        <h3 class="center-align">Login</h3>
+      </div>
+      <div class="row">
+        <div class="input-field col s8 offset-s2">
+            <input type="email" [(ngModel)]="email" name="email" id="email">
+            <label for="email">Email</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s8 offset-s2">
+            <input type="password" [(ngModel)]="password" name="password" class="validate" id="password">
+            <label for="password">Password</label>
+        </div>
+      </div>
+      <div class="row">
+        <button class="btn" type="submit" id="buttStyle">Sign In</button>
+      </div>
+    </form>
+  </div>
+</div>
