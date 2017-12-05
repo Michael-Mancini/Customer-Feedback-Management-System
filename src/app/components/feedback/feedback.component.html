@@ -1,8 +1,10 @@
 <div class="row">
-    <div class="col s8 offset-s2">
-        <h4 class="left">Customer Feedback</h4>
+    <div class="" style="width:70%;margin-left:auto;margin-right:auto;">
+        <h4 class="left" style="">Customer Feedback</h4>
         <a (click)='addItem()' href="#" id="marg" class="waves-effect btn right">
-            <i class="material-icons left">add</i>Add New
+            <i *ngIf='addNewIcon' class="material-icons left">add</i>
+            <i *ngIf='!addNewIcon' class="material-icons left">close</i>
+            Add New
         </a>
     </div>
 </div>
@@ -11,9 +13,20 @@
     <app-add-new></app-add-new>
 </div>
 
+<form class="center-align">
+    <h5 style="display:inline-block; padding-right:8px;">Filter: </h5>
+    <input type="radio" id="testimonial" name="filter" class="with-gap" (click)="filter = 'Testimonial'">
+    <label for="testimonial" style="margin-right:5px;padding-right:5px;">Testimonials</label>
+    <input type="radio" id="improvement" name="filter" class="with-gap" (click)="filter = 'Suggestion for Improvement'">
+    <label for="improvement" style="margin-right:5px;padding-right:5px;">Improvements</label>
+    <input type="radio" id="non-buyer" name="filter" class="with-gap" (click)="filter = 'Non-buyers'" >
+    <label for="non-buyer" style="margin-right:5px;padding-right:5px;">Non-buyers</label>
+</form>
+<br>
+
 <div *ngIf='feedbacks?.length > 0;else noFeedback'>
     <div *ngFor='let f of feedbacks.reverse()'>
-        <!--<div *ngIf="f.category == 'Testimonial'" >-->
+        <div *ngIf="f.category == filter || filter == 'all'" >
         <div class="row">
             <div class="col s8 offset-s2">
                 <div class="card teal accent-4 hoverable">
@@ -30,7 +43,7 @@
                 </div>
             </div>
         </div>
-        <!--</div>-->
+        </div>
     </div>
 </div>
 

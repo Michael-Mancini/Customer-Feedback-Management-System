@@ -15,6 +15,8 @@ export class FeedbackComponent implements OnInit {
   addState:boolean = false;
   deleteState:boolean = false;
   inQuestion:Feedback;
+  filter:string = 'all';
+  addNewIcon:boolean = true;
 
   constructor(private fbs:FeedbackService,
   private fms:FlashMessagesService) { }
@@ -29,6 +31,7 @@ export class FeedbackComponent implements OnInit {
 
   addItem(){
     this.addState = !this.addState;
+    this.addNewIcon = !this.addNewIcon;
   }
 
   onDeleteClick(event, f:Feedback){

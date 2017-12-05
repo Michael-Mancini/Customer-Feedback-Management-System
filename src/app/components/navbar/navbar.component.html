@@ -2,7 +2,7 @@
   <div class="nav-wrapper container">
     <a href="#" class="brand-logo left">Course Concierge</a>
     <ul class="right">
-      <li *ngIf='isLoggedIn'><a routerLink='/' href="#">Dashboard</a></li>
+      <li *ngIf='isLoggedIn'><a routerLink='/' href="">Dashboard</a></li>
       <li *ngIf='isLoggedIn'><a routerLink='/settings' href="#">Settings</a></li>
       <li *ngIf="!isLoggedIn && showRegister"><a routerLink='/register' href="#">Register</a></li>
       <li *ngIf='!isLoggedIn'><a routerLink='/login' href="#">Login</a></li>
