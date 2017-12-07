@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+	<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+	<style type="text/css">
+		body{
+			background-color: #74afad;
+			color: #f4f4f4;
+			font-family: 'Raleway';
+		}
+
+		h5{
+			border: 1px solid #ececea;
+			background-color: #558c89;
+			padding: 10px;
+			box-sizing: border-box;
+			width: 100%;
+			height: 45px;
+		}
+
+		h5:hover{
+			box-sizing: border-box;
+			cursor: pointer;
+			color: gainsboro;
+			border: 2px solid #ececea;
+		}
+
+		.active{
+			box-sizing: border-box;
+			border: 2px solid #d9853b;
+		}
+
+		#orangebutt{
+			background-color: #d9853b;
+			color: #ececea;
+			border: 1px solid #f4f4f4;
+			width: 50%;
+			transition: all ease 200ms;
+		}
+
+		#orangebutt:hover{
+			color: black;
+			cursor: pointer;
+			width: 60%;
+			background-color: #eda76a;
+		}
+
+		.entry{
+			text-align: left;
+			border: 1px solid white;
+			padding: 30px;
+			border-radius: 10px;
+			background-color: #558c89;
+			margin-bottom: 20px;
+		}
+
+		.entry h6{
+			font-weight: 700;
+		}
+	</style>
+	<title>Course Concierge</title>
+</head>
+<body>
+	<div class="container text-center my-5">
+		<h1>Course Concierge</h1>
+		<h3>Feedback and Suggestions</h3>
+		<hr style="background-color: white;">
+		<div class="row">
+			<div class="col-4">
+				<h5 class="active">Positive Feedback</h5>
+			</div>
+			<div class="col-4">
+				<h5>Negative Feedback</h5>
+			</div>
+			<div class="col-4">
+				<h5 class="">Suggestions</h5>
+			</div>
+		</div>
+		<br>
+		<form>
+			<input type="text" class="form-control" id="name" placeholder="Enter customer name...">
+			<br>
+			<textarea class="form-control" rows="10" placeholder="Type feedback or suggestion in here..."></textarea>
+			<br>
+			<button id="orangebutt" class="form-control btn" type="submit">Submit</button>
+		</form>
+		<br>
+		<div class="entry">
+			<h6>Jeff L:</h6>
+			<p>I can’t thank you enough for this course Steve! I am blown away by how much I am learning from you already. 110% worth it for the course.</p>
+		</div>
+		<div class="entry">
+			<h6>Kelly M:</h6>
+			<p>I have been watching you for years, this is the first thing I have actually built! It was great fun, and got me off the computer, making!</p>
+		</div>
+		<div class="entry">
+			<h6>Jim Forger:</h6>
+			<p>I needed to take a second to let you know that I LOVE LOVE LOVE that you include your entire build process in the project videos rather than just showing final abbreviated results. You can’t imagine how refreshing it was to watch you go back and trim the bottom workbench pieces not once, but twice! In youtube videos it seemed like everybody except me could take a measurement, cut a piece precisely to that measurement, and have the piece fit perfectly every single time. It usually takes me several adjustments to get to the right fit and it’s nice to know I’m not alone. It was also reassuring to watch how many times you checked squaring when assembling the legs . Most youtube videos show a quick check prior to gluing/screwing and their results are always perfect, while I always need to check and recheck multiple times. I hope others find as much value in this as I do so you will continue to show us the “real” behind-the-scene process.</p>
+		</div>
+		<div class="entry">
+			<h6>Martin Shkreli:</h6>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+		</div>
+	</div>
+</body>
+</html>

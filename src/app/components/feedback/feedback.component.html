@@ -27,22 +27,22 @@
 <div *ngIf='feedbacks?.length > 0;else noFeedback'>
     <div *ngFor='let f of feedbacks.reverse()'>
         <div *ngIf="f.category == filter || filter == 'all'" >
-        <div class="row">
-            <div class="col s8 offset-s2">
-                <div class="card teal accent-4 hoverable">
-                    <div class="card-content white-text">
-                        <span class="card-title flow-text">{{f.name}}<p id="smallerText" class="right flow-text">{{f.category}}</p></span>
-                        <p>{{f.body}}</p>
-                        <p *ngIf='!deleteState'><button class="btn-floating red right" (click)='onDeleteClick($event, f)'><i class="material-icons">delete</i></button></p>
-                        <div *ngIf='deleteState && inQuestion.key == f.key' class="card-action"><p class="right">Are you sure? <a id='pl' href="#" (click)='deleteF()' class="red-text text-lighten-1">Yes</a><a href="#" (click)='changeback()' class="teal-text text-lighten-5" id="no">No</a></p>
+            <div class="row">
+                <div class="col s8 offset-s2">
+                    <div class="card teal accent-4 hoverable">
+                        <div class="card-content white-text">
+                            <span class="card-title flow-text">{{f.name}}<p id="smallerText" class="right flow-text">{{f.category}}</p></span>
+                            <p>{{f.body}}</p>
+                            <p *ngIf='!deleteState'><button class="btn-floating red right" (click)='onDeleteClick($event, f)'><i class="material-icons">delete</i></button></p>
+                            <div *ngIf='deleteState && inQuestion.key == f.key' class="card-action"><p class="right">Are you sure? <a id='pl' href="#" (click)='deleteF()' class="red-text text-lighten-1">Yes</a><a href="#" (click)='changeback()' class="teal-text text-lighten-5" id="no">No</a></p>
+                            </div>
+                            <p *ngIf='deleteState && inQuestion.key != f.key'>
+                                <button class="btn-floating disabled right"><i class="material-icons">delete</i></button>
+                            </p>
                         </div>
-                        <p *ngIf='deleteState && inQuestion.key != f.key'>
-                            <button class="btn-floating disabled right"><i class="material-icons">delete</i></button>
-                        </p>
                     </div>
                 </div>
             </div>
-        </div>
         </div>
     </div>
 </div>
